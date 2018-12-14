@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вариант 6</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="algo.js"></script>
+    <script src="web.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+<div id="task">
+    <p align="center">
+        <FONT size="+2">Вариант №6.</FONT> <br> <b><i>C</i><sub>p<sub id="x">x</sub>q</sub></b>.
+        <b><i>C</i><sub>ij</sub> = &sum;<sub>k</sub> d<sub>kij</sub> ,</b>
+    <p id="Dkij" align="center">
+        где
+        <b>
+            d<sub>kij</sub> = (|a<sub>ik</sub>| &le; |b<sub>kj</sub>|)?a<sub>ik</sub>*b<sub>kj</sub>:(b<sub>ik</sub>=0)?(a<sub>ik</sub>)<sup>2</sup>+b<sub>kj</sub>:(a<sub>ik</sub>)<sup>2</sup>-|a<sub>ik</sub>*b<sub>kj</sub>|
+        </b>
+    </p>
+</div>
+    <div>
+        <p align="center">
+            <strong>Введите размерности матриц:</strong><br>
+            p = <input id="p" required min="1">
+            m = <input id="m" required min="1">
+            q = <input id="q" required min="1"> <br>
+        </p>
+    </div>
+
+    <p align="center">
+        <strong>Введите количество процессорных элементов:</strong><br>
+        n = <input id="n" required min="1">
+    </p>
+
+
+    <div>
+        <p align="center">
+        <strong>Введите время выполнения операций:</strong><br>
+        Сложение &nbsp&nbsp<input type="text" id="add" required><br>
+        Разность &nbsp&nbsp&nbsp&nbsp<input type="text" id="sub" required><br>
+        Умножение <input type="text" id="mult" required><br>
+        Сравнение &nbsp<input type="text" id="comp" required><br>
+        Модуль &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="mod" required><br>
+            Возведение в квадрат <input id="exp" type="text" size="8">
+        </p>
+    </div>
+
+    <div align="center">
+        <button type="button" class="mainBtn" onclick="matrix();" id="start">Рассчитать</button>
+        <button type="reset" class="mainBtn" id="clean">Графики</button>
+    </div>
+
+<p> </p>
+
+<div id="result1"></div>
+
+
+<table id="matrix1" border=1></table>
+<div id="result2"></div>
+<table id="matrix2" border=1></table>
+<div id="result3"></div>
+<table id="matrix3" border=1></table>
+<div id="t"></div>
+<div id="Ky"></div>
+<div id="e"></div>
+<div id="D"></div>
+
+    <div id="output"></div>
+    <div id="table-1"></div>
+    <div id="table-2"></div>
+    <div id="table-3"></div>
+    <div id="table-4"></div>
+    <div id="table-5"></div>
+    <div id="table-6"></div>
+</body>
+</html>
